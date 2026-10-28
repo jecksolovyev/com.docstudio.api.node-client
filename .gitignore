@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.generated/
+.idea
+.DS_Store
+
+# release tooling lives in com.docstudio.api.tooling
+/scripts/
+/spec/
+/config.json
+/openapitools.json
+/generate.sh
+/.openapi-generator/
+/.openapi-generator-ignore
+/clients.local.json
