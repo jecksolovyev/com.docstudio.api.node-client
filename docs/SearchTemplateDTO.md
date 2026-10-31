@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **access** | **string** | Template access level | [optional] [default to undefined]
 **categories** | **Array&lt;string&gt;** | Template categories | [optional] [default to undefined]
 **createdAt** | **string** | Date of Template creation | [optional] [default to undefined]
-**description** | **string** | Template description | [default to undefined]
+**description** | **string** | Template description | [optional] [default to undefined]
 **favorite** | **boolean** | Template marked as favorite | [optional] [default to undefined]
 **logoImageUuid** | **string** | UUID of the template logo image | [optional] [default to undefined]
 **mailboxUuid** | **string** | Template owner mailbox UUID | [default to undefined]

@@ -619,7 +619,7 @@ const { status, data } = await apiInstance.getColumnValue(
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 

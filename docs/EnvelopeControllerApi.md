@@ -250,6 +250,7 @@ void (empty response body)
 # **approve**
 > SingleUuidDTO approve(bulkEnvelopeActionDTO)
 
+One envelope is processed synchronously and the response carries that envelope\'s uuid; several are handed to a background process and the response carries the process uuid.
 
 ### Example
 
@@ -471,6 +472,7 @@ void (empty response body)
 # **cancelEnvelopes**
 > SingleUuidDTO cancelEnvelopes(envCancellationRequestDTO)
 
+One envelope is processed synchronously and the response carries that envelope\'s uuid; several are handed to a background process and the response carries the process uuid.
 
 ### Example
 
@@ -873,7 +875,7 @@ const { status, data } = await apiInstance.createAttachment(
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -1040,7 +1042,7 @@ const { status, data } = await apiInstance.createPdfAttachment(
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -1058,6 +1060,7 @@ No authorization required
 # **delegateEnvelopes**
 > SingleUuidDTO delegateEnvelopes(envDelegationDTO)
 
+One envelope is processed synchronously and the response carries that envelope\'s uuid; several are handed to a background process and the response carries the process uuid.
 
 ### Example
 
@@ -2435,7 +2438,7 @@ const { status, data } = await apiInstance.getEnvelopeZip(
 
 ### Authorization
 
-No authorization required
+[bearerAuth](../README.md#bearerAuth)
 
 ### HTTP request headers
 
@@ -3484,6 +3487,7 @@ const { status, data } = await apiInstance.sendByTemplateCode(
 # **sendForApproval**
 > SingleUuidDTO sendForApproval(envelopeApprovalRequestDTO)
 
+One envelope is processed synchronously and the response carries that envelope\'s uuid; several are handed to a background process and the response carries the process uuid.
 
 ### Example
 

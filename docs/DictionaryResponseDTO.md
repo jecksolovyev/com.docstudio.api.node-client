@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **archive** | **boolean** | Dictionary archived flag | [default to undefined]
 **columns** | [**Array&lt;DictionaryColumnResponseDTO&gt;**](DictionaryColumnResponseDTO.md) |  | [optional] [default to undefined]
 **createdAt** | **string** | Dictionary created date | [default to undefined]
-**description** | **string** | Dictionary description | [default to undefined]
+**description** | **string** | Dictionary description | [optional] [default to undefined]
 **editable** | **boolean** | Dictionary can be edited | [default to undefined]
 **filteredAccessOnly** | **boolean** | Dictionary can be used only with filtering | [default to undefined]
 **mailboxUuid** | **string** | Owner of the dictionary | [optional] [default to undefined]

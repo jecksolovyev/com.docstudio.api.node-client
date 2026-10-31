@@ -11,12 +11,12 @@ All URIs are relative to *https://api.docstudio.com*
 |[**deleteViewPreferences**](#deleteviewpreferences) | **DELETE** /api/v1/mailbox/view-preferences | Delete mailbox view preferences|
 |[**getAccountLogoByMailbox**](#getaccountlogobymailbox) | **GET** /api/v1/mailbox/{mailboxUuid}/logo | Retrieve mailbox account logo|
 |[**getActivityLog**](#getactivitylog) | **GET** /api/v1/mailbox/activity-log | Audit trail feed for mailbox|
-|[**getAllForUser**](#getallforuser) | **GET** /api/v1/mailbox/user-view | Retrieve user\&#39;s mailbox list|
 |[**getAllForUserWithPagination**](#getallforuserwithpagination) | **GET** /api/v1/mailbox | Retrieve user\&#39;s mailbox list with pagination|
 |[**getAutoDelegation**](#getautodelegation) | **GET** /api/v1/mailbox/{mailboxUuid}/auto-delegation | Get auto delegation settings|
 |[**getCustomizedDashboard**](#getcustomizeddashboard) | **GET** /api/v1/mailbox/{mailboxUuid}/dashboard | Get mailbox dashboard|
 |[**getCustomizedDashboardHtml**](#getcustomizeddashboardhtml) | **GET** /api/v1/mailbox/dashboard.html | Get mailbox dashboard html|
 |[**getMailboxEssentials**](#getmailboxessentials) | **GET** /api/v1/mailbox/essentials | Get mailbox essentials|
+|[**getMailboxesForUserView**](#getmailboxesforuserview) | **GET** /api/v1/mailbox/user-view | Retrieve the mailboxes of the user\&#39;s sidebar view|
 |[**getMailboxesInfo**](#getmailboxesinfo) | **POST** /api/v1/mailbox/info | Retrieve mailboxes info|
 |[**getStat**](#getstat) | **GET** /api/v1/mailbox/stat | Get number of unread envelopes in every scope|
 |[**getUsedTemplates**](#getusedtemplates) | **GET** /api/v1/mailbox/templates/used | List of used templates|
@@ -417,62 +417,6 @@ const { status, data } = await apiInstance.getActivityLog(
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **getAllForUser**
-> Array<User2MailboxDTO> getAllForUser()
-
-
-### Example
-
-```typescript
-import {
-    MailboxControllerApi,
-    Configuration
-} from '@docstudio/api-client';
-
-const configuration = new Configuration();
-const apiInstance = new MailboxControllerApi(configuration);
-
-let pinned: boolean; //Return all pinned mailboxes (optional) (default to undefined)
-let mailboxesForAccount: number; //Return mailboxes for each account (max 5) (optional) (default to undefined)
-let requiredMailboxId: string; //Required mailbox in the response (optional) (default to undefined)
-
-const { status, data } = await apiInstance.getAllForUser(
-    pinned,
-    mailboxesForAccount,
-    requiredMailboxId
-);
-```
-
-### Parameters
-
-|Name | Type | Description  | Notes|
-|------------- | ------------- | ------------- | -------------|
-| **pinned** | [**boolean**] | Return all pinned mailboxes | (optional) defaults to undefined|
-| **mailboxesForAccount** | [**number**] | Return mailboxes for each account (max 5) | (optional) defaults to undefined|
-| **requiredMailboxId** | [**string**] | Required mailbox in the response | (optional) defaults to undefined|
-
-
-### Return type
-
-**Array<User2MailboxDTO>**
-
-### Authorization
-
-[bearerAuth](../README.md#bearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-|**200** | OK |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **getAllForUserWithPagination**
 > PageDTOUser2MailboxDTO getAllForUserWithPagination()
 
@@ -720,6 +664,63 @@ const { status, data } = await apiInstance.getMailboxEssentials(
 ### Return type
 
 **MailboxEssentialsDTO**
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+|**200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **getMailboxesForUserView**
+> Array<User2MailboxDTO> getMailboxesForUserView()
+
+Returns only the mailboxes the selectors below ask for; GET /api/v1/mailbox lists every mailbox the user can reach.
+
+### Example
+
+```typescript
+import {
+    MailboxControllerApi,
+    Configuration
+} from '@docstudio/api-client';
+
+const configuration = new Configuration();
+const apiInstance = new MailboxControllerApi(configuration);
+
+let pinned: boolean; //Return all pinned mailboxes (optional) (default to undefined)
+let mailboxesForAccount: number; //Return mailboxes for each account (max 5) (optional) (default to undefined)
+let requiredMailboxId: string; //Required mailbox in the response (optional) (default to undefined)
+
+const { status, data } = await apiInstance.getMailboxesForUserView(
+    pinned,
+    mailboxesForAccount,
+    requiredMailboxId
+);
+```
+
+### Parameters
+
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+| **pinned** | [**boolean**] | Return all pinned mailboxes | (optional) defaults to undefined|
+| **mailboxesForAccount** | [**number**] | Return mailboxes for each account (max 5) | (optional) defaults to undefined|
+| **requiredMailboxId** | [**string**] | Required mailbox in the response | (optional) defaults to undefined|
+
+
+### Return type
+
+**Array<User2MailboxDTO>**
 
 ### Authorization
 

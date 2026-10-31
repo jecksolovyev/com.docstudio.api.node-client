@@ -7,7 +7,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **configSchema** | **string** |  | [optional] [default to undefined]
 **group** | **string** |  | [optional] [default to undefined]
-**multipleInput** | **boolean** |  | [optional] [default to undefined]
 **outputParams** | **Set&lt;string&gt;** |  | [optional] [default to undefined]
 **type** | **string** |  | [optional] [default to undefined]
 
@@ -19,7 +18,6 @@ import { BrickTypeGet } from '@docstudio/api-client';
 const instance: BrickTypeGet = {
     configSchema,
     group,
-    multipleInput,
     outputParams,
     type,
 };
