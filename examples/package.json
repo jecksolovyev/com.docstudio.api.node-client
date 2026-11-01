@@ -1,0 +1,22 @@
+{
+  "name": "docstudio-api-client-examples",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Runnable examples for @docstudio/api-client",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@docstudio/api-client": "168.21.0"
+  },
+  "scripts": {
+    "01": "node 01-authenticate.mjs",
+    "02": "node 02-mailboxes.mjs",
+    "03": "node 03-browse.mjs",
+    "04": "node 04-send-for-signature.mjs",
+    "05": "node 05-application-token.mjs",
+    "06": "node 06-form-auth.mjs"
+  }
+}
