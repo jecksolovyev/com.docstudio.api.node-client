@@ -6,6 +6,7 @@ Send EditorialReviewInitRequest in BLOB format with Content-Type: application/js
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**mandatoryApproval** | **boolean** | If true, the review can be finished only after every reviewer approved the same document version, and the document is locked for editing after the first approval | [optional] [default to undefined]
 **message** | **string** | Message of envelope | [optional] [default to undefined]
 **recipients** | [**Array&lt;EditorialReviewRecipient&gt;**](EditorialReviewRecipient.md) |  | [default to undefined]
 **subject** | **string** | Subject of envelope | [default to undefined]
@@ -16,6 +17,7 @@ Name | Type | Description | Notes
 import { EditorialReviewInitRequest } from '@docstudio/api-client';
 
 const instance: EditorialReviewInitRequest = {
+    mandatoryApproval,
     message,
     recipients,
     subject,

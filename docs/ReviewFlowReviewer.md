@@ -6,6 +6,7 @@ Mailbox invited to a running editorial review
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**canOnlyComment** | **boolean** | True for a commentator who can only comment the document; omitted or false for a reviewer who can edit it | [optional] [default to undefined]
 **name** | **string** | Display name of the reviewer within the review | [default to undefined]
 **recipient** | **string** | Mailbox id or email of the reviewer | [default to undefined]
 
@@ -15,6 +16,7 @@ Name | Type | Description | Notes
 import { ReviewFlowReviewer } from '@docstudio/api-client';
 
 const instance: ReviewFlowReviewer = {
+    canOnlyComment,
     name,
     recipient,
 };

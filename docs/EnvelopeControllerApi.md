@@ -33,6 +33,7 @@ All URIs are relative to *https://api.docstudio.com*
 |[**envelopeApprovalHistory**](#envelopeapprovalhistory) | **GET** /api/v1/envelope/{id}/approval-history | Get approval history|
 |[**fill**](#fill) | **PUT** /api/v1/envelope/fill | Fill envelope|
 |[**generateStamp**](#generatestamp) | **POST** /api/v1/envelope/generate-stamp | Generate stamp by certificate|
+|[**getActionLinkForUser**](#getactionlinkforuser) | **GET** /api/v1/envelope/{id}/action-link | |
 |[**getActiveRoles**](#getactiveroles) | **GET** /api/v1/envelope/{id}/activeRoles | Get active roles by Envelope UUID|
 |[**getApprovalFlow**](#getapprovalflow) | **GET** /api/v1/envelope/{id}/approval/{flowUuid} | Get envelope approval|
 |[**getArchiveInfo**](#getarchiveinfo) | **GET** /api/v1/envelope/attachment/archive-info | Get attachment archive info (p7s, asice, pdf)|
@@ -1658,6 +1659,62 @@ const { status, data } = await apiInstance.generateStamp(
 
  - **Content-Type**: application/json
  - **Accept**: image/png
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+|**200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **getActionLinkForUser**
+> ActionLinkResponse getActionLinkForUser()
+
+
+### Example
+
+```typescript
+import {
+    EnvelopeControllerApi,
+    Configuration
+} from '@docstudio/api-client';
+
+const configuration = new Configuration();
+const apiInstance = new EnvelopeControllerApi(configuration);
+
+let id: string; //UUID of envelope (default to undefined)
+let email: string; //Email of user assigned to a role (default to undefined)
+let mailbox: string; //Mailbox context, HTTP Header with current mailbox UUID (default to undefined)
+
+const { status, data } = await apiInstance.getActionLinkForUser(
+    id,
+    email,
+    mailbox
+);
+```
+
+### Parameters
+
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+| **id** | [**string**] | UUID of envelope | defaults to undefined|
+| **email** | [**string**] | Email of user assigned to a role | defaults to undefined|
+| **mailbox** | [**string**] | Mailbox context, HTTP Header with current mailbox UUID | defaults to undefined|
+
+
+### Return type
+
+**ActionLinkResponse**
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 
 
 ### HTTP response details

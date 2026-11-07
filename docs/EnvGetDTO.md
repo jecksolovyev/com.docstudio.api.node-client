@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **labels** | **Set&lt;string&gt;** |  | [optional] [default to undefined]
 **metadata** | **{ [key: string]: string; }** | Envelope metadata | [optional] [default to undefined]
 **receivedAt** | **string** | Date of receiving the envelope by the mailbox | [optional] [default to undefined]
+**review** | [**ReviewInfo**](ReviewInfo.md) | Current review round state (editorial review only) | [optional] [default to undefined]
 **savedDocSignatures** | [**Array&lt;ExtEnvelopeDocumentSignaturesDTO&gt;**](ExtEnvelopeDocumentSignaturesDTO.md) |  | [optional] [default to undefined]
 **sender** | [**EnvelopeSenderDTO**](EnvelopeSenderDTO.md) | Envelope sender info | [optional] [default to undefined]
 **sentAt** | **string** | Envelope sending date | [optional] [default to undefined]
@@ -43,6 +44,7 @@ const instance: EnvGetDTO = {
     labels,
     metadata,
     receivedAt,
+    review,
     savedDocSignatures,
     sender,
     sentAt,

@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **mailboxName** | **string** | Mailbox name of approval initiator | [optional] [default to undefined]
 **mailboxUUID** | **string** | Mailbox UUID of approval initiator | [optional] [default to undefined]
 **message** | **string** | The envelope message | [optional] [default to undefined]
+**review** | [**ReviewInfo**](ReviewInfo.md) | Current review round state | [optional] [default to undefined]
 **seenAt** | **string** | Date-time it was seen by approver | [optional] [default to undefined]
 **status** | **string** | Status of approval | [optional] [default to undefined]
 **subject** | **string** | The envelope subject | [optional] [default to undefined]
@@ -39,6 +40,7 @@ const instance: EnvApprovalSearchResultDTO = {
     mailboxName,
     mailboxUUID,
     message,
+    review,
     seenAt,
     status,
     subject,

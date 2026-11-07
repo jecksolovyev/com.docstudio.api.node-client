@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **hideUnauthorizedFunctions** | **boolean** | Hide or disable unauthorized functions | [optional] [default to undefined]
 **infoLinks** | [**Array&lt;ExternalLinkShortResponseDTO&gt;**](ExternalLinkShortResponseDTO.md) | Info menu links | [optional] [default to undefined]
 **integrations** | [**ConnectorProperties**](ConnectorProperties.md) | Available integrations | [optional] [default to undefined]
+**jsExtensions** | **Array&lt;string&gt;** | JS extension names (for live chat/documentation) | [optional] [default to undefined]
 **links** | [**AppLinks**](AppLinks.md) | Application Links | [optional] [default to undefined]
 **locales** | [**AppLocales**](AppLocales.md) | Supported locales | [optional] [default to undefined]
 **logosProperties** | [**LogosProperties**](LogosProperties.md) | Logos properties | [optional] [default to undefined]
@@ -29,7 +30,6 @@ Name | Type | Description | Notes
 **pdf** | [**PdfPropertiesDTO**](PdfPropertiesDTO.md) | PDF properties | [optional] [default to undefined]
 **podName** | **string** | Kubernetes Pod Name | [optional] [default to undefined]
 **sso** | [**SsoProperties**](SsoProperties.md) | SSO properties | [optional] [default to undefined]
-**supportChatProvider** | **string** | Support live chat provider name | [optional] [default to undefined]
 **supportedBarcodes** | [**Array&lt;SupportedBarcodeDTO&gt;**](SupportedBarcodeDTO.md) | Supported barcodes | [optional] [default to undefined]
 **template** | [**TemplateRestriction**](TemplateRestriction.md) | Template Restrictions | [optional] [default to undefined]
 **testMode** | **boolean** | Is Test Mode enabled? | [optional] [default to undefined]
@@ -57,6 +57,7 @@ const instance: SettingsDTO = {
     hideUnauthorizedFunctions,
     infoLinks,
     integrations,
+    jsExtensions,
     links,
     locales,
     logosProperties,
@@ -66,7 +67,6 @@ const instance: SettingsDTO = {
     pdf,
     podName,
     sso,
-    supportChatProvider,
     supportedBarcodes,
     template,
     testMode,
