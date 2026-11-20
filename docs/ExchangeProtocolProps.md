@@ -10,7 +10,6 @@ Name | Type | Description | Notes
 **port** | **string** |  | [default to undefined]
 **dbnaAccount** | **string** |  | [default to undefined]
 **ftpPassword** | **string** |  | [default to undefined]
-**url** | **string** |  | [default to undefined]
 
 ## Example
 
@@ -23,7 +22,6 @@ const instance: ExchangeProtocolProps = {
     port,
     dbnaAccount,
     ftpPassword,
-    url,
 };
 ```
 

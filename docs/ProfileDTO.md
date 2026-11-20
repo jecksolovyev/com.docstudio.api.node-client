@@ -6,6 +6,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **accounts** | [**Array&lt;User2AccountWithMailboxesDTO&gt;**](User2AccountWithMailboxesDTO.md) | User accounts belongs to | [optional] [default to undefined]
+**activatedAt** | **string** | Date when the user completed registration (first became active) | [optional] [default to undefined]
 **autoDepositMailboxUuid** | **string** | Auto Deposit Mailbox UUID | [optional] [default to undefined]
 **corporateAccountId** | **string** | Corporate account UUID | [optional] [default to undefined]
 **corporateUser** | **boolean** |  | [optional] [default to undefined]
@@ -34,6 +35,7 @@ import { ProfileDTO } from '@docstudio/api-client';
 
 const instance: ProfileDTO = {
     accounts,
+    activatedAt,
     autoDepositMailboxUuid,
     corporateAccountId,
     corporateUser,

@@ -4,7 +4,7 @@ TypeScript client for the [DocStudio API](https://api.docstudio.com), generated 
 server's OpenAPI document with
 [openapi-generator](https://openapi-generator.tech) (`typescript-axios`).
 
-- API version: `R169.4`
+- API version: `R170.5`
     - Generator version: `7.24.0`
 - Build package: `org.openapitools.codegen.languages.TypeScriptAxiosClientCodegen`
 

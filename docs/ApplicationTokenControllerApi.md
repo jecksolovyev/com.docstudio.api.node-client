@@ -9,7 +9,7 @@ All URIs are relative to *https://api.docstudio.com*
 |[**revokeToken**](#revoketoken) | **DELETE** /api/v1/token/{id} | Revoke application token|
 
 # **createToken**
-> AppTokenDTO createToken(createAppTokenDTO)
+> AppTokenDTO createToken(createAppToken)
 
 
 ### Example
@@ -18,16 +18,16 @@ All URIs are relative to *https://api.docstudio.com*
 import {
     ApplicationTokenControllerApi,
     Configuration,
-    CreateAppTokenDTO
+    CreateAppToken
 } from '@docstudio/api-client';
 
 const configuration = new Configuration();
 const apiInstance = new ApplicationTokenControllerApi(configuration);
 
-let createAppTokenDTO: CreateAppTokenDTO; //
+let createAppToken: CreateAppToken; //
 
 const { status, data } = await apiInstance.createToken(
-    createAppTokenDTO
+    createAppToken
 );
 ```
 
@@ -35,7 +35,7 @@ const { status, data } = await apiInstance.createToken(
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **createAppTokenDTO** | **CreateAppTokenDTO**|  | |
+| **createAppToken** | **CreateAppToken**|  | |
 
 
 ### Return type

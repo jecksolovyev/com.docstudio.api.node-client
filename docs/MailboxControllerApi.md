@@ -6,6 +6,8 @@ All URIs are relative to *https://api.docstudio.com*
 |------------- | ------------- | -------------|
 |[**createMailbox**](#createmailbox) | **POST** /api/v1/mailbox/account/{uuid} | Create mailbox|
 |[**customizeDashboard**](#customizedashboard) | **PUT** /api/v1/mailbox/{mailboxUuid}/dashboard | Customize mailbox dashboard|
+|[**customizeDashboardWidgets**](#customizedashboardwidgets) | **PUT** /api/v1/mailbox/dashboard-widgets | Customize mailbox dashboard widgets|
+|[**deleteCustomizedDashboardWidgets**](#deletecustomizeddashboardwidgets) | **DELETE** /api/v1/mailbox/dashboard-widgets | Delete mailbox dashboard widgets|
 |[**deleteMailbox**](#deletemailbox) | **DELETE** /api/v1/mailbox | Delete mailbox by UUID in the header.|
 |[**deleteMailboxUsers**](#deletemailboxusers) | **DELETE** /api/v1/mailbox/{mailboxUuid}/users | Delete mailbox users except requester|
 |[**deleteViewPreferences**](#deleteviewpreferences) | **DELETE** /api/v1/mailbox/view-preferences | Delete mailbox view preferences|
@@ -15,6 +17,7 @@ All URIs are relative to *https://api.docstudio.com*
 |[**getAutoDelegation**](#getautodelegation) | **GET** /api/v1/mailbox/{mailboxUuid}/auto-delegation | Get auto delegation settings|
 |[**getCustomizedDashboard**](#getcustomizeddashboard) | **GET** /api/v1/mailbox/{mailboxUuid}/dashboard | Get mailbox dashboard|
 |[**getCustomizedDashboardHtml**](#getcustomizeddashboardhtml) | **GET** /api/v1/mailbox/dashboard.html | Get mailbox dashboard html|
+|[**getCustomizedDashboardWidgets**](#getcustomizeddashboardwidgets) | **GET** /api/v1/mailbox/dashboard-widgets | Get mailbox dashboard widgets|
 |[**getMailboxEssentials**](#getmailboxessentials) | **GET** /api/v1/mailbox/essentials | Get mailbox essentials|
 |[**getMailboxesForUserView**](#getmailboxesforuserview) | **GET** /api/v1/mailbox/user-view | Retrieve the mailboxes of the user\&#39;s sidebar view|
 |[**getMailboxesInfo**](#getmailboxesinfo) | **POST** /api/v1/mailbox/info | Retrieve mailboxes info|
@@ -134,6 +137,109 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+|**200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **customizeDashboardWidgets**
+> customizeDashboardWidgets(body)
+
+
+### Example
+
+```typescript
+import {
+    MailboxControllerApi,
+    Configuration
+} from '@docstudio/api-client';
+
+const configuration = new Configuration();
+const apiInstance = new MailboxControllerApi(configuration);
+
+let mailbox: string; //Mailbox context, HTTP Header with current mailbox UUID (default to undefined)
+let body: string; //
+
+const { status, data } = await apiInstance.customizeDashboardWidgets(
+    mailbox,
+    body
+);
+```
+
+### Parameters
+
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+| **body** | **string**|  | |
+| **mailbox** | [**string**] | Mailbox context, HTTP Header with current mailbox UUID | defaults to undefined|
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+|**200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **deleteCustomizedDashboardWidgets**
+> deleteCustomizedDashboardWidgets()
+
+
+### Example
+
+```typescript
+import {
+    MailboxControllerApi,
+    Configuration
+} from '@docstudio/api-client';
+
+const configuration = new Configuration();
+const apiInstance = new MailboxControllerApi(configuration);
+
+let mailbox: string; //Mailbox context, HTTP Header with current mailbox UUID (default to undefined)
+
+const { status, data } = await apiInstance.deleteCustomizedDashboardWidgets(
+    mailbox
+);
+```
+
+### Parameters
+
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+| **mailbox** | [**string**] | Mailbox context, HTTP Header with current mailbox UUID | defaults to undefined|
+
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: Not defined
 
 
@@ -623,6 +729,56 @@ const { status, data } = await apiInstance.getCustomizedDashboardHtml(
 
  - **Content-Type**: Not defined
  - **Accept**: text/html
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+|**200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **getCustomizedDashboardWidgets**
+> string getCustomizedDashboardWidgets()
+
+
+### Example
+
+```typescript
+import {
+    MailboxControllerApi,
+    Configuration
+} from '@docstudio/api-client';
+
+const configuration = new Configuration();
+const apiInstance = new MailboxControllerApi(configuration);
+
+let mailbox: string; //Mailbox context, HTTP Header with current mailbox UUID (default to undefined)
+
+const { status, data } = await apiInstance.getCustomizedDashboardWidgets(
+    mailbox
+);
+```
+
+### Parameters
+
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+| **mailbox** | [**string**] | Mailbox context, HTTP Header with current mailbox UUID | defaults to undefined|
+
+
+### Return type
+
+**string**
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
 
 
 ### HTTP response details

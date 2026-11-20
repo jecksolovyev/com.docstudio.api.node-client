@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **externalLinks** | [**Array&lt;ExternalLinkShortResponseDTO&gt;**](ExternalLinkShortResponseDTO.md) |  | [optional] [default to undefined]
 **hasCustomDashboard** | **boolean** |  | [optional] [default to undefined]
+**hasDashboardWidgets** | **boolean** |  | [optional] [default to undefined]
 **statCounters** | **{ [key: string]: number; }** |  | [optional] [default to undefined]
 
 ## Example
@@ -17,6 +18,7 @@ import { MailboxEssentialsDTO } from '@docstudio/api-client';
 const instance: MailboxEssentialsDTO = {
     externalLinks,
     hasCustomDashboard,
+    hasDashboardWidgets,
     statCounters,
 };
 ```

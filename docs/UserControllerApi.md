@@ -13,6 +13,7 @@ All URIs are relative to *https://api.docstudio.com*
 |[**getCorporateUserProfile**](#getcorporateuserprofile) | **GET** /api/v1/user/profile/{id}/account/{accountUuid} | Retrieve corporate user profile|
 |[**getProfile**](#getprofile) | **GET** /api/v1/user/profile | Retrieve self profile|
 |[**getUserMailboxesInfo**](#getusermailboxesinfo) | **POST** /api/v1/user/info | Retrieve users info|
+|[**getUsertourToken**](#getusertourtoken) | **GET** /api/v1/user/usertour-token | Get Usertour identity verification token|
 |[**patchCorporateUserProfile**](#patchcorporateuserprofile) | **PATCH** /api/v1/user/profile/{userId}/account/{accountId} | Partial update corporate user\&#39;s profile|
 |[**patchPreferences**](#patchpreferences) | **PATCH** /api/v1/user/preferences | Patch user preferences|
 |[**patchProfile**](#patchprofile) | **PATCH** /api/v1/user/profile | Patch user profile|
@@ -466,6 +467,49 @@ const { status, data } = await apiInstance.getUserMailboxesInfo(
 ### HTTP request headers
 
  - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+|**200** | OK |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **getUsertourToken**
+> UsertourToken getUsertourToken()
+
+
+### Example
+
+```typescript
+import {
+    UserControllerApi,
+    Configuration
+} from '@docstudio/api-client';
+
+const configuration = new Configuration();
+const apiInstance = new UserControllerApi(configuration);
+
+const { status, data } = await apiInstance.getUsertourToken();
+```
+
+### Parameters
+This endpoint does not have any parameters.
+
+
+### Return type
+
+**UsertourToken**
+
+### Authorization
+
+[bearerAuth](../README.md#bearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 

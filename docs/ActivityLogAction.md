@@ -42,6 +42,10 @@ Action performed
 
 * `MailboxEntitiesTransferred` (value: `'mailbox-entities-transferred'`)
 
+* `DashboardHtmlUpdated` (value: `'dashboard-html-updated'`)
+
+* `DashboardWidgetsUpdated` (value: `'dashboard-widgets-updated'`)
+
 * `UserInvited` (value: `'user-invited'`)
 
 * `UserInvitationRevoked` (value: `'user-invitation-revoked'`)

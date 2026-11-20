@@ -7,7 +7,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **dbnaAccount** | **string** |  | [default to undefined]
 **ftpPassword** | **string** |  | [default to undefined]
-**url** | **string** |  | [default to undefined]
 
 ## Example
 
@@ -17,7 +16,6 @@ import { ExchangeAs4DbnaProps } from '@docstudio/api-client';
 const instance: ExchangeAs4DbnaProps = {
     dbnaAccount,
     ftpPassword,
-    url,
 };
 ```
 
